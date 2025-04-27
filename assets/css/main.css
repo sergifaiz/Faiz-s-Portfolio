@@ -8,6 +8,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* --- Header --- */
 header {
   position: fixed;
@@ -39,6 +43,12 @@ header {
   justify-content: center;
   cursor: pointer;
   z-index: 1100;
+  transition: opacity 0.3s;
+}
+
+#hamburger:hover {
+  opacity: 0.7;
+
 }
 
 #hamburger svg {
@@ -138,9 +148,6 @@ nav ul li a:hover {
   }
 }
 
-
-
-
 .headerhamburger {
   width: calc(100% - 48px);
   display: flex;
@@ -161,6 +168,7 @@ nav ul li a:hover {
   cursor: pointer;
   z-index: 1;
 }
+
 
 .iconhamburger i {
   display: flex;
@@ -546,7 +554,7 @@ nav ul li a svg {
   padding: 12px 15px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .contact-form textarea {
@@ -612,8 +620,8 @@ nav ul li a svg {
 }
 
 .tech-icons img {
-  width: 75px;
-  height: 75px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
   margin: 16px;
   filter: grayscale(100%);
@@ -643,6 +651,8 @@ nav ul li a svg {
   transition: opacity 0.3s ease;
   z-index: 999;
   text-decoration: none;
+  padding-left: 12px;
+  padding-top: 12px;
 }
 
 .box-scrolltop:hover {
@@ -656,4 +666,12 @@ nav ul li a svg {
 
 .box-scrolltop:hover .icon-scrolltop {
   stroke: #fff;
+}
+
+#scrollTopButton {
+  display: none; /* hidden at start */
+}
+
+#scrollTopButton.show {
+  display: block;
 }
